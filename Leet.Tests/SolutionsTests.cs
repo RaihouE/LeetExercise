@@ -25,4 +25,15 @@ public class SolutionsTests
 
         Assert.Equal(output, pivotIndex);
     }
+
+    [Theory]
+    [InlineData("egg", "add", true)]
+    [InlineData("badc", "baba", false)]
+    [InlineData("paper", "title", true)]
+    public void IsIsomorphic(string s, string t, bool outcome)
+    {
+        var isIsomorphic = Solutions.Solutions.IsIsomorphic(s, t);
+
+        Assert.Equal(outcome, isIsomorphic);
+    }
 }
